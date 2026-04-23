@@ -80,33 +80,27 @@
 
 ---
 
+
 ## 进阶方向
 
-* **复杂分布偏移场景探索**
+### 1. 复杂分布偏移场景探索 (参考方法ADAPT)
+探索更具挑战性的分布偏移类型，包括：
+- 雾化（Fog / Haze）
+- 噪声干扰（Gaussian Noise / Shot Noise）
+- 模糊（Motion Blur / Defocus Blur）
 
-  探索更具挑战性的分布偏移类型，如：
+### 2. 多标签任务下的 TTA 研究 (参考方法BEM)
+将测试时自适应方法扩展至多标签任务，重点分析：
+- 不同标签间相关性对 TTA 效果的影响
+- 预测熵最小化在多标签场景下的适用性
+- 各方法在多标签任务中的性能变化
 
-  * 雾化（Fog / Haze）
-  * 噪声干扰（Gaussian Noise / Shot Noise）
-  * 模糊（Motion Blur / Defocus Blur）
+### 3. 设计一种全新的 TTA 方法
+可从以下视角出发：
+- 引入权重正则化（Weight Regularization）
+- 使用历史样本缓存（Memory Buffer）
+- 动态调整学习率或更新频率
 
-
-* **多标签任务下的TTA研究**
-  
-  将TTA方法扩展至多标签任务，分析：
-
-  * 不同标签间相关性对TTA效果的影响
-  * 预测熵最小化在多标签场景下的适用性
-  * 各方法在多标签任务中的性能变化
-
-
- * **设计一种全新的TTA方法**
-   
-  可以从如下视角出发：
-
-  * 引入权重正则化（Weight Regularization）
-  * 使用历史样本缓存（Memory Buffer）
-  * 动态调整学习率或更新频率
 
 
 ---
@@ -131,6 +125,7 @@
 * ADAPT: [https://arxiv.org/abs/2508.15568](https://arxiv.org/abs/2508.15568)
 * CoTTA: [https://arxiv.org/abs/2203.13591](https://arxiv.org/abs/2203.13591)
 * SHOT: [https://arxiv.org/abs/2002.08546](https://arxiv.org/abs/2002.08546)
+* BEM:[https://arxiv.org/abs/2502.03777](https://arxiv.org/abs/2502.03777)
 
 
 
