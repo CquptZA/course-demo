@@ -29,14 +29,14 @@
 
   * **图像任务**
 
-    * 如 CIFAR-10 / CIFAR-100 / ImageNet 子集
-    * 可结合 CIFAR-10-C（含多种分布偏移）以及多标签图像数据集MS-COCO / VOC / NUS-WIDE
+    * 如 CIFAR-10 / CIFAR-100 / ImageNet 数据集，可结合 CIFAR-10-C（含多种分布偏移）以及多标签图像数据集MS-COCO / VOC / NUS-WIDE
     * 基于CLIP / BLIP等预训练模型
 
   * **时间序列任务**
 
     * 如ETTh / EXCHANGE / Weather 系列时序基准数据集
     * 可结合Transformer / Linear 为基础的架构模型
+      
 
 ---
 
@@ -91,7 +91,6 @@
   * 模糊（Motion Blur / Defocus Blur）
 
 
----
 
 * **多标签任务下的TTA研究**
   将TTA方法扩展至多标签分类任务（Multi-label Classification），分析：
@@ -108,7 +107,7 @@
   * 模型是否遗忘早期数据分布
   * 不同TTA方法的稳定性差异
 
-  **可探索优化方向：**
+ *  **设计一种全新的TTA方法：**
 
   * 引入权重正则化（Weight Regularization）
   * 使用历史样本缓存（Memory Buffer）
