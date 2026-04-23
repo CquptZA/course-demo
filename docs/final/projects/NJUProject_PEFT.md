@@ -31,23 +31,23 @@
 
     * 如 CIFAR-10 / CIFAR-100 / ImageNet 子集
     * 可结合 CIFAR-10-C（含多种分布偏移）以及多标签图像数据集MS-COCO / VOC / NUS-WIDE
-    * 基于CLIP或BLIP等预训练模型
+    * 基于CLIP / BLIP等预训练模型
 
   * **时间序列任务**
 
     * 如ETTh / EXCHANGE / Weather 系列时序基准数据集
-    * 可结合Transformer / Linear / 和 MLP为基础的架构模型
+    * 可结合Transformer / Linear 为基础的架构模型
 
 ---
 
 
 ### 2. 方法实现（至少选择三种，需覆盖不同策略类别）：
 
-#### **基于预测优化类**
+#### **提示调优类**
 
 例如
-* TENT（Test-time Entropy Minimization）
-* MEMO（Test-time Augmentation）
+* TPT（Test-time Prompt Tuning）
+* DiffTPT（Diverse Data Augmentation with Diffusions）
 
 #### **统计调整类**
 
@@ -81,13 +81,42 @@
 
 ---
 
-## 进阶方向
+## 进阶方向（优化版）
 
-* 尝试结合多个TTA方法
-* 比较**在线TTA vs 离线TTA**效果
-* 分析**灾难性遗忘（Catastrophic Forgetting）**问题
-* 探索在小批量甚至单样本情况下的TTA表现
-* 可视化模型在测试时的参数变化或预测分布变化
+* **复杂分布偏移场景探索**
+  探索更具挑战性的分布偏移类型，如：
+
+  * 雾化（Fog / Haze）
+  * 噪声干扰（Gaussian Noise / Shot Noise）
+  * 模糊（Motion Blur / Defocus Blur）
+
+
+---
+
+* **多标签任务下的TTA研究**
+  将TTA方法扩展至多标签分类任务（Multi-label Classification），分析：
+
+  * 不同标签间相关性对TTA效果的影响
+  * 预测熵最小化在多标签场景下的适用性
+  * 各方法在多标签任务中的性能变化
+
+---
+
+* **灾难性遗忘问题分析与缓解**
+  在连续测试数据流（Continual Test Stream）中，分析：
+
+  * 模型是否遗忘早期数据分布
+  * 不同TTA方法的稳定性差异
+
+  **可探索优化方向：**
+
+  * 引入权重正则化（Weight Regularization）
+  * 使用历史样本缓存（Memory Buffer）
+  * 动态调整学习率或更新频率
+
+---
+
+
 
 ---
 
@@ -105,8 +134,8 @@
 
 ## 参考资源
 
-* TENT: [https://arxiv.org/abs/2006.10726](https://arxiv.org/abs/2006.10726)
-* MEMO: [https://arxiv.org/abs/2110.09506](https://arxiv.org/abs/2110.09506)
+* TPT: [https://arxiv.org/abs/2209.07511](https://https://arxiv.org/abs/2209.07511)
+* DiffTPT: [https://arxiv.org/abs//2308.06038](https://arxiv.org/abs/2308.06038)
 * CoTTA: [https://arxiv.org/abs/2203.13591](https://arxiv.org/abs/2203.13591)
 * SHOT: [https://arxiv.org/abs/2002.08546](https://arxiv.org/abs/2002.08546)
 * DOTA: [https://arxiv.org/abs/2409.19375](https://arxiv.org/abs/2409.19375)
