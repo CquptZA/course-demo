@@ -81,7 +81,7 @@
 
 ---
 
-## 进阶方向（优化版）
+## 进阶方向
 
 * **复杂分布偏移场景探索**
   探索更具挑战性的分布偏移类型，如：
@@ -91,7 +91,6 @@
   * 模糊（Motion Blur / Defocus Blur）
 
 
-
 * **多标签任务下的TTA研究**
   将TTA方法扩展至多标签分类任务（Multi-label Classification），分析：
 
@@ -99,13 +98,6 @@
   * 预测熵最小化在多标签场景下的适用性
   * 各方法在多标签任务中的性能变化
 
----
-
-* **灾难性遗忘问题分析与缓解**
-  在连续测试数据流（Continual Test Stream）中，分析：
-
-  * 模型是否遗忘早期数据分布
-  * 不同TTA方法的稳定性差异
 
  *  **设计一种全新的TTA方法：**
 
@@ -113,7 +105,6 @@
   * 使用历史样本缓存（Memory Buffer）
   * 动态调整学习率或更新频率
 
----
 
 
 
@@ -135,9 +126,10 @@
 
 * TPT: [https://arxiv.org/abs/2209.07511](https://https://arxiv.org/abs/2209.07511)
 * DiffTPT: [https://arxiv.org/abs//2308.06038](https://arxiv.org/abs/2308.06038)
-* CoTTA: [https://arxiv.org/abs/2203.13591](https://arxiv.org/abs/2203.13591)
-* SHOT: [https://arxiv.org/abs/2002.08546](https://arxiv.org/abs/2002.08546)
 * DOTA: [https://arxiv.org/abs/2409.19375](https://arxiv.org/abs/2409.19375)
 * ADAPT: [https://arxiv.org/abs/2508.15568](https://arxiv.org/abs/2508.15568)
+* CoTTA: [https://arxiv.org/abs/2203.13591](https://arxiv.org/abs/2203.13591)
+* SHOT: [https://arxiv.org/abs/2002.08546](https://arxiv.org/abs/2002.08546)
+
 
 
