@@ -11,7 +11,7 @@
 * 访问大赛官网了解任务详情：
   👉 [https://algo.qq.com/](https://algo.qq.com/)
 
-* 掌握**生成式推荐（Generative Recommendation）**的基础框架
+* 掌握 **生成式推荐（Generative Recommendation）** 的基础框架
 
 * 基于官方提供的 **Baseline 代码进行优化与改进**
 
